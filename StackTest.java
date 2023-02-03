@@ -7,7 +7,7 @@ class Stack {
         int data;
         Node next;  
     }
-    private Node top;
+    Node top;
       
     public Stack()
     { 
@@ -24,6 +24,27 @@ class Stack {
     // pop() method here
     // only to be called if list is non-empty.
     // Otherwise an exception should be thrown.
+    public int pop(){
+        // if (top != null){
+        //     System.out.println("\nList is already empty");
+        //     int x = top.data;
+        //     top = top.next;
+
+        //     return x;
+        // }
+        // else{
+        //     return 0;
+        // }
+
+        try {
+            int x = top.data;
+            top = top.next;
+            return x;
+        } catch (Exception e) {
+            System.out.println("\nList is already empty");
+            return 0;
+        }
+    }
        
 
 
@@ -51,10 +72,10 @@ public class StackTest
         s.push(10); s.push(3); s.push(11); s.push(7);
         s.display();
         
-        //int i = s.pop();
+        int i = s.pop();
         
-        // System.out.println("Just popped " + i);
-        // s.display();
+        System.out.println("Just popped " + i);
+        s.display();
     }
 }
 
