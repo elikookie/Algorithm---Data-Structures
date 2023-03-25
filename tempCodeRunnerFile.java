@@ -1,1 +1,1 @@
- s.push(10); s.push(3); s.push(11); s.push(7);
+dge (u,v)
